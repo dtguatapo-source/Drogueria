@@ -1,1 +1,189 @@
 <p>inventario works!</p>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+
+        <span>SISTEMA DROGUERIA PILY</span>
+    </div>
+
+    <!-- MENU DE NAVEGACIÓN -->
+    <nav>
+        <ul>
+
+            <li routerLink="/dashboard">
+                Inicio
+            </li>
+
+            <li routerLink="/inventario" class="active">
+                Inventario
+            </li>
+
+            <li routerLink="/compras">
+                Compras
+            </li>
+
+            <li routerLink="/ventas">
+                Ventas
+            </li>
+
+            <li routerLink="/informes">
+                Informes
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- parte derecha -->
+    <div class="user-section">
+        <span class="admin">Admin</span>
+        <button class="logout" (click)="salir()">Salir</button>
+    </div>
+</header>
+
+
+<!-- CONTENIDO -->
+<main class="container">
+
+    <h1>Agregar Producto</h1>
+
+    <div class="search-box">
+        <input type="text" placeholder="Buscar producto...">
+    </div>
+
+    <!-- FORMULARIO -->
+    <section class="card-form">
+
+        <h3>Datos del Producto</h3>
+
+        <div class="form-grid">
+
+            <div>
+                <label>Id producto</label>
+                <input type="text" placeholder="Ingresar código del producto">
+            </div>
+
+            <div>
+                <label>Nombre del Medicamento</label>
+                <input type="text" placeholder="Ingrese el nombre...">
+            </div>
+
+            <div>
+                <label>Laboratorio</label>
+                <input type="text" placeholder="Nombre del laboratorio">
+            </div>
+
+            <div>
+                <label>Descripcion</label>
+                <input type="text" placeholder="Descripción del producto">
+            </div>
+
+            <div>
+                <label>Cantidad</label>
+                <input type="number">
+            </div>
+
+            <div>
+                <label>Precio Compra</label>
+                <input type="text" placeholder="$">
+            </div>
+
+            <div>
+                <label>Precio Venta</label>
+                <input type="text" placeholder="$">
+            </div>
+
+        </div>
+
+        <button class="add-btn">+</button>
+
+    </section>
+
+
+    <!-- TABLA -->
+    <section class="card-table">
+
+        <h3>Listado de Productos</h3>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nonmbre</th>
+                    <th>Laboratotio</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>
+                    <th>Precio Compra</th>
+                    <th>Precio Venta</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>MED-001</td>
+                    <td>Acetaminofén 500mg</td>
+                    <td>Genfar</td>
+                    <td>Analgésico y antipirético</td>
+                    <td>50</td>
+                    <td>$1.200</td>
+                    <td>$1.900</td>
+                    <td><span class="estado activo">Activo</span></td>
+                </tr>
+
+            </tbody>
+
+            <tbody>
+
+                <tr>
+                    <td>MED-001</td>
+                    <td>Amoxicilina500mg</td>
+                    <td>Genfar</td>
+                    <td>Analgésico</td>
+                    <td>50</td>
+                    <td>$3.200</td>
+                    <td>$2.000</td>
+                    <td><span class="estado activo">Activo</span></td>
+                </tr>
+
+            </tbody>
+
+            <tbody>
+
+                <tr>
+                    <td>MED-001</td>
+                    <td>Ibuprofeno 500mg</td>
+                    <td>Genfar</td>
+                    <td>Analgésico</td>
+                    <td>50</td>
+                    <td>$1.000</td>
+                    <td>$3.900</td>
+                    <td><span class="estado activo">Activo</span></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+
+    <!-- Botones -->
+    <div class="bottom-buttons">
+
+        <button class="btn modificar">Modificar</button>
+
+        <button class="btn eliminar">Eliminar</button>
+
+        <button class="btn registrar">Registrar</button>
+
+        <button class="btn limpiar">Limpiar datos</button>
+
+        <button class="btn salir" routerLink="/dashboard">
+            ← Volver al Dashboard
+        </button>
+
+    </div>
+
+</main>
