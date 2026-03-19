@@ -28,18 +28,24 @@
     box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-.logo{
-    width:100px;
-    height:100px;
-    border-radius:50%;
-    margin:0 auto 20px;
-    background:linear-gradient(135deg,#5bb1c7,#5b7ac7);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:40px;
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #5bb1c7, #5b7ac7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Añadimos esto para asegurar que nada sobresalga */
+    overflow: hidden; 
 }
 
+.logo img {
+    width: 70%; 
+    height: auto;
+    object-fit: contain;
+}
 .card h1{
     color:#2f8f8f;
     font-size:28px;
@@ -112,15 +118,4 @@ button{
 button:hover{
     background:#ffffff;
     transform:scale(1.03);
-}
-
-.forgot{
-    margin-top:20px;
-    text-align:center;
-}
-
-.forgot a{
-    color:white;
-    text-decoration:underline;
-    opacity:0.8;
 }

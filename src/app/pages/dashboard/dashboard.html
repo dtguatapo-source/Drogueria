@@ -1,42 +1,54 @@
-<h2 class="titulo">Bienvenido al Sistema</h2>
-<p class="subtitulo">Seleccione un módulo para continuar</p>
+<div class="header-seccion">
+  <div class="logo-pequeno">
+    <img src="iconos/flor.png" alt="Logo">
+  </div>
+
+  <div class="texto-header">
+    <h2 class="titulo">Bienvenida al sistema</h2>
+    <p class="subtitulo">Seleccione un modulo para continuar</p>
+  </div>
+  
+  <div class="user-section">
+    <span class="admin">Admin</span>
+    <button class="logout" (click)="salir()">Salir</button>
+  </div>
+</div>
 
 <div class="contenedor">
 
-  <!-- inventario -->
   <div class="card" routerLink="/inventario">
     <div class="icono">
-      <img src="assets/iconos/carrito.png" alt="Inventario">
+      <img src="iconos/cajita.png" alt="Inventario">
     </div>
     <h3>Inventario</h3>
-    <p>Gestionar productos</p>
+    <p>En este componente usted puede gestiona su inventario </p>
   </div>
 
-  <!-- compras -->
+  
   <div class="card" routerLink="/compras">
     <div class="icono">
-      <img src="assets/iconos/compras.svg" alt="Compras">
+      <img src="iconos/carrito.png" alt="Compras">
     </div>
     <h3>Compras</h3>
-    <p>Registrar compras</p>
+    <p>En este componente se puede registrar una compra</p>
   </div>
 
-  <!-- ventas -->
+ 
   <div class="card" routerLink="/ventas">
     <div class="icono">
-      <img src="assets/iconos/ventas.svg" alt="Ventas">
+      <img src="iconos/venta.png" alt="Ventas">
     </div>
     <h3>Ventas</h3>
-    <p>Control de ventas</p>
+    <p>En este  componente usted puede llevar un control de ventas</p>
   </div>
 
-  <!-- informes -->
+ 
   <div class="card" routerLink="/informes">
     <div class="icono">
-      <img src="assets/iconos/informes.svg" alt="Informes">
+      <img src="iconos/informe.png" alt="Informes">
     </div>
     <h3>Informes</h3>
-    <p>Ver reportes</p>
+    <p>Aqui se genera o visualiza sus reportes</p>
   </div>
 
 </div>
