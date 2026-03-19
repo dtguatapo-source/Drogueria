@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-ventas',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
   templateUrl: './ventas.html',
   styleUrl: './ventas.css',
 })
-export class Ventas {}
+export class Ventas {
+
+  
+}

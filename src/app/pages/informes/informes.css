@@ -1,0 +1,201 @@
+/* PARA EL CONTENEDOR GENERAL*/
+
+.informes-container{
+  background:#f4f6fb;
+  min-height:100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BARRA SUPERIOR */
+
+.barra-superior{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:white;
+  padding:12px 30px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* LOGO */
+
+.logo{
+  font-weight:bold;
+  color:#4f54d3;
+  font-size:16px;
+}
+
+/* MENU */
+
+.menu{
+  display:flex;
+  gap:30px;
+}
+
+.menu a{
+  text-decoration:none;
+  color:#3c4a6b;
+  font-size:14px;
+}
+
+.menu .activo{
+  background:#4f54d3;
+  color:white;
+  padding:6px 14px;
+  border-radius:8px;
+}
+
+/* BOTONES SUPERIORES */
+
+.botones-superiores{
+  display:flex;
+  gap:10px;
+}
+
+.botones-superiores button{
+  border:none;
+  padding:6px 14px;
+  border-radius:15px;
+  font-size:12px;
+  cursor:pointer;
+}
+
+.admin{
+  background:#dff5ec;
+  color:#1e9b6c;
+}
+
+.salir{
+  background:#ffe3e3;
+  color:#d9534f;
+}
+
+/* TITULO */
+
+.titulo-informes{
+  padding:20px 40px;
+}
+
+.titulo-informes h2{
+  color:#2f3b66;
+}
+
+/* TARJETA FILTROS */
+
+.filtros{
+  background:white;
+  padding:30px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  margin:30px 40px;
+}
+
+/* FILA FILTROS */
+
+.fila-filtros{
+  display:flex;
+  align-items:flex-end;
+  gap:20px;
+}
+
+/* CAMPOS */
+
+.campo{
+  display:flex;
+  flex-direction:column;
+}
+
+.campo label{
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:6px;
+}
+
+.campo input{
+  width:220px;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #dcdcdc;
+  background:#f7f8fb;
+}
+
+/* SEPARADOR */
+
+.separador{
+  font-size:18px;
+  color:#777;
+}
+
+/* BOTONES FILTRO */
+
+.botones-filtro{
+  display:flex;
+  gap:12px;
+}
+
+.buscar{
+  background:#39b8a8;
+  color:white;
+  border:none;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.excel{
+  background:#e6f7f3;
+  color:#39b8a8;
+  border:1px solid #39b8a8;
+  padding:10px 18px;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+/* TABLA */
+
+.resultados-ventas{
+  background:white;
+  margin:30px 40px;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+thead{
+  background:#4f54d3;
+  color:white;
+}
+
+thead th{
+  padding:10px;
+  text-align:left;
+}
+
+tbody td{
+  padding:10px;
+  border-bottom:1px solid #eee;
+}
+
+tbody tr:hover{
+  background:#f7f8ff;
+}
+
+/* BOTON VOLVER */
+
+.volver{
+  margin:20px 40px;
+}
+
+.volver button{
+  border:1px solid #4f54d3;
+  background:white;
+  color:#4f54d3;
+  padding:8px 16px;
+  border-radius:6px;
+  cursor:pointer;
+}

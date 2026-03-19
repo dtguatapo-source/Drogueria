@@ -1,1 +1,209 @@
-<p>ventas works!</p>
+<div class="ventas-container">
+
+<!-- BARRA SUPERIOR -->
+<div class="barra-superior">
+
+  <nav class="menu">
+
+    <!-- LOGO -->
+    <div class="logo">
+       <span>SISTEMA DROGUERÍA PILI</span>
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-links">
+      <a routerLink="/">Inicio</a>
+      <a routerLink="/inventario">Inventario</a>
+      <a routerLink="/compras"> Compras</a>
+      <a routerLink="/ventas"><strong> Ventas</strong></a>
+      <a routerLink="/informes">Informes</a>
+    </div>
+
+    <!-- ADMINISTRADOR -->
+    <div class="menu-administrador">
+      <span class="admin">Admin</span>
+      <span class="salir">⟵ Salir</span>
+    </div>
+
+  </nav>
+
+</div>
+
+
+<!-- TITULO -->
+<div class="titulo-ventas">
+  <h2>Registro de Ventas</h2>
+</div>
+
+
+<!-- TARJETAS -->
+<div class="resumen">
+
+  <div class="tarjeta">
+    <p>VENTAS HOY</p>
+    <h3>$48.500</h3>
+  </div>
+
+  <div class="tarjeta">
+    <p>TRANSACCIONES</p>
+    <h3>23</h3>
+  </div>
+
+  <div class="tarjeta">
+    <p>PRODUCTOS VENDIDOS</p>
+    <h3>87</h3>
+  </div>
+
+  <div class="tarjeta">
+    <p>VENTAS DEL MES</p>
+    <h3>$1.200.000</h3>
+  </div>
+
+</div>
+
+
+<!-- FORMULARIO -->
+<div class="formulario-venta">
+
+  <h3>Nueva Venta</h3>
+
+  <div class="fila">
+
+    <div class="campo">
+      <label>Fecha de Venta</label>
+      <input type="date">
+    </div>
+
+    <div class="campo">
+      <label>Cliente</label>
+      <input type="text" placeholder="Nombre del cliente">
+    </div>
+
+    <div class="campo">
+      <label>N° Factura</label>
+      <input type="text" value="VTA-0001">
+    </div>
+
+  </div>
+
+  <div class="fila">
+
+    <div class="campo">
+      <label>Código Medicamento</label>
+      <input type="text">
+    </div>
+
+    <div class="campo">
+      <label>Medicamento</label>
+      <input type="text">
+    </div>
+
+    <div class="campo">
+      <label>Laboratorio</label>
+      <input type="text">
+    </div>
+
+    <div class="campo">
+      <label>Fecha Caducidad</label>
+      <input type="date">
+    </div>
+
+  </div>
+
+
+  <div class="opciones">
+    <label>
+      <input type="checkbox">
+      No caduca
+    </label>
+
+    <label>
+      <input type="checkbox">
+      Habilitar
+    </label>
+
+  </div>
+
+  <div class="fila">
+
+    <div class="campo">
+      <label>Cantidad</label>
+      <input type="number">
+    </div>
+
+    <div class="campo">
+      <label>Precio Venta</label>
+      <input type="number">
+    </div>
+
+    <div class="campo total">
+      <label>Total</label>
+      <input type="number">
+    </div>
+
+    <button class="boton-agregar">+</button>
+
+  </div>
+
+</div>
+
+<!-- DETALLE DE VENTA -->
+
+<div class="detalle">
+
+  <h3>Detalle de Venta</h3>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Laboratorio</th>
+        <th>Cantidad</th>
+        <th>Precio Venta</th>
+        <th>Total</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>001</td>
+        <td>Ibuprofeno 400mg</td>
+        <td>Genfar</td>
+        <td>3</td>
+        <td>$3800</td>
+        <td>$11400</td>
+        <td>
+          <button class="boton-quitar"> Quitar</button>
+        </td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+  <div class="total-general">
+    Total: <strong>$11.400</strong>
+  </div>
+
+</div>
+
+
+<!-- BOTONES -->
+
+<div class="botones">
+
+  <button class="boton confirmar">Confirmar Venta</button>
+
+  <button class="boton imprimir">Imprimir</button>
+
+  <button class="boton limpiar">Limpiar</button>
+
+  <button class="boton salir">⟵ Salir</button>
+
+</div>
+
+</div>

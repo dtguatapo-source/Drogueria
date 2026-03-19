@@ -1,1 +1,104 @@
-<p>informes works!</p>
+<div class="informes-container">
+
+  <!-- BARRA SUPERIOR -->
+  <div class="barra-superior">
+
+    <!-- LOGO Y TITULO -->
+    <div class="logo">
+       <span>SISTEMA DROGUERÍA PILI</span>
+    </div>
+
+    <!-- MENÚ -->
+    <nav class="menu">
+      <a routerLink="/">Inicio</a>
+      <a routerLink="/inventario">Inventario</a>
+      <a routerLink="/compras">Compras</a>
+      <a routerLink="/ventas">Ventas</a>
+      <a routerLink="/informes" class="activo">Informes</a>
+    </nav>
+
+    <!-- BOTONES -->
+    <div class="botones-superiores">
+      <button class="admin">Admin</button>
+      <button class="salir">Salir</button>
+    </div>
+
+  </div>
+
+  <!-- TITULO DE LA PAGINA -->
+  <div class="titulo-informes">
+    <h2>INFORMES DE VENTA</h2>
+  </div>
+
+  <!-- FILTROS -->
+ <section class="filtros">
+
+  <div class="fila-filtros">
+
+    <div class="campo">
+      <label>FECHA INICIAL</label>
+      <input type="date">
+    </div>
+
+    <div class="separador">→</div>
+
+    <div class="campo">
+      <label>FECHA FINAL</label>
+      <input type="date">
+    </div>
+
+    <div class="botones-filtro">
+      <button class="buscar"> Buscar</button>
+      <button class="excel"> Exportar Excel</button>
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- RESULTADOS VENTAS -->
+  <section class="resultados-ventas">
+
+    <table>
+
+      <thead>
+        <tr>
+          <th>FECHA DE LA VENTA</th>
+          <th>NUMERO DE FACTURA</th>
+          <th>CLIENTE</th>
+          <th>PRODUCTO</th>
+          <th>CANTIDAD</th>
+          <th>VALOR TOTAL</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>01-02-2026</td>
+          <td>FACTURA-002</td>
+          <td>Camila Quiñones</td>
+          <td>Acetaminofen 500mg</td>
+          <td>10</td>
+          <td>$50.0000</td>
+        </tr>
+
+        <tr>
+          <td>29-07-2025</td>
+          <td>FACTURA-010</td>
+          <td>Nicolle Quiñones</td>
+          <td>Amoxicilina 500mg</td>
+          <td>3</td>
+          <td>$5.000</td>
+        </tr>
+      </tbody>
+
+    </table>
+
+  </section>
+
+  <!-- BOTON VOLVER -->
+  <div class="volver">
+    <button>⟵Volver al Inicio</button>
+  </div>
+
+</div>
