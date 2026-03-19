@@ -1,0 +1,104 @@
+/* fondo general */
+:host {
+  display: block;
+  padding: 30px;
+  background: #f4f6fb;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* título */
+.titulo {
+  text-align: left;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* subtítulo */
+.subtitulo {
+  margin-bottom: 30px;
+  color: #7f8c8d;
+}
+
+/* contenedor */
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+/* tarjetas */
+.card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 20px;
+  text-align: center;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+/* efecto hover */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* icono (cuadrito arriba) */
+.icono {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+/* colores diferentes */
+.inventario {
+  background: #ffeaa7;
+}
+
+.compras {
+  background: #dfe6e9;
+}
+
+.ventas {
+  background: #55efc4;
+}
+
+.informes {
+  background: #74b9ff;
+}
+
+/* texto */
+.card h3 {
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.card p {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+/* RESPONSIVE (celular) */
+@media (max-width: 600px) {
+  .titulo {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+
+  .card {
+    padding: 25px 15px;
+  }
+}

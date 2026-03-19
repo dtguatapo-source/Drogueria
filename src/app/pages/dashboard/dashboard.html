@@ -1,8 +1,42 @@
-<h2>Dashboard</h2>
+<h2 class="titulo">Bienvenido al Sistema</h2>
+<p class="subtitulo">Seleccione un módulo para continuar</p>
 
-<div>
-  <button routerLink="/inventario">Inventario</button>
-  <button routerLink="/compras">Compras</button>
-  <button routerLink="/ventas">Ventas</button>
-  <button routerLink="/informes">Informes</button>
+<div class="contenedor">
+
+  <!-- inventario -->
+  <div class="card" routerLink="/inventario">
+    <div class="icono">
+      <img src="assets/iconos/carrito.png" alt="Inventario">
+    </div>
+    <h3>Inventario</h3>
+    <p>Gestionar productos</p>
+  </div>
+
+  <!-- compras -->
+  <div class="card" routerLink="/compras">
+    <div class="icono">
+      <img src="assets/iconos/compras.svg" alt="Compras">
+    </div>
+    <h3>Compras</h3>
+    <p>Registrar compras</p>
+  </div>
+
+  <!-- ventas -->
+  <div class="card" routerLink="/ventas">
+    <div class="icono">
+      <img src="assets/iconos/ventas.svg" alt="Ventas">
+    </div>
+    <h3>Ventas</h3>
+    <p>Control de ventas</p>
+  </div>
+
+  <!-- informes -->
+  <div class="card" routerLink="/informes">
+    <div class="icono">
+      <img src="assets/iconos/informes.svg" alt="Informes">
+    </div>
+    <h3>Informes</h3>
+    <p>Ver reportes</p>
+  </div>
+
 </div>

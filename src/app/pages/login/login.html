@@ -3,9 +3,7 @@
   <!-- LADO IZQUIERDO -->
   <div class="left">
     <div class="card">
-      <div class="logo">
-    
-      </div>
+      <div class="logo"></div>
       <h1>Droguería Pili</h1>
       <p>SISTEMA DE GESTIÓN</p>
     </div>
@@ -18,19 +16,23 @@
 
       <div class="input-group">
         <label>Usuario</label>
-        <input type="text" placeholder="Ingrese su usuario">
+        <input type="text" name="usuario" [(ngModel)]="usuario" placeholder="Ingrese su usuario">
       </div>
 
       <div class="input-group">
         <label>Contraseña</label>
-        <input type="password" placeholder="Ingrese su contraseña">
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Ingrese su contraseña">
       </div>
 
+    
       <button (click)="entrar()">Ingresar</button>
 
-      <div class="forgot">
-        <a href="#">Recordar contraseña</a>
-      </div>
+      <p *ngIf="mensajeError" style="color:red; margin-top:10px;">
+        {{ mensajeError }}
+      </p>
+
+      
+
     </div>
   </div>
 
