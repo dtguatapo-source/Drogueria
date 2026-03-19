@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height:100vh;
+    display:flex;
+}
+
+/* LADO IZQUIERDO */
+.left{
+    width:50%;
+    background: linear-gradient(135deg,#c9e7e7,#e6f1f1);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.card{
+    background:#f2f2f2;
+    width:350px;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    margin:0 auto 20px;
+    background:linear-gradient(135deg,#5bb1c7,#5b7ac7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:40px;
+}
+
+.card h1{
+    color:#2f8f8f;
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    letter-spacing:2px;
+}
+
+/* LADO DERECHO */
+.right{
+    width:50%;
+    background: linear-gradient(135deg,#6b73ff,#4c53b6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
+
+.login-box{
+    width:70%;
+}
+
+.login-box h2{
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+.input-group{
+    margin-bottom:25px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    opacity:0.8;
+}
+
+.input-group input{
+    width:100%;
+    padding:15px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.3);
+    background:rgba(255,255,255,0.1);
+    color:white;
+    outline:none;
+    font-size:16px;
+}
+
+.input-group input::placeholder{
+    color:rgba(255,255,255,0.6);
+}
+
+button{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:40px;
+    background:#f2f2f2;
+    color:#4c53b6;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    margin-top:15px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ffffff;
+    transform:scale(1.03);
+}
+
