@@ -19,8 +19,8 @@
 
     <!-- BOTONES -->
     <div class="botones-superiores">
-      <button class="admin">Admin</button>
-      <button class="salir">Salir</button>
+      <button class="admin" (click)="irAdmin()">Admin</button>
+      <button class="salir" (click)="salir()">Salir</button>
     </div>
 
   </div>
@@ -35,21 +35,27 @@
 
   <div class="fila-filtros">
 
-    <div class="campo">
+   <div class="campo">
       <label>FECHA INICIAL</label>
-      <input type="date">
-    </div>
+      <input type="date" formControlName="fechaInicial">
 
-    <div class="separador">→</div>
+      <small *ngIf="FormularioInformes.get('fechaInicial')?.invalid && FormularioInformes.get('fechaInicial')?.touched">
+        
+      </small>
+    </div>
 
     <div class="campo">
       <label>FECHA FINAL</label>
-      <input type="date">
+      <input type="date" formControlName="fechaFinal">
+
+      <small *ngIf="FormularioInformes.get('fechaFinal')?.invalid && FormularioInformes.get('fechaFinal')?.touched">
+        
+      </small>
     </div>
 
     <div class="botones-filtro">
-      <button class="buscar"> Buscar</button>
-      <button class="excel"> Exportar Excel</button>
+      <button class="buscar" (click)="buscarVentas()"> Buscar</button>
+      <button class="excel" (click)="exportarExcel()"> Exportar Excel</button>
     </div>
 
   </div>
@@ -98,7 +104,7 @@
 
   <!-- BOTON VOLVER -->
   <div class="volver">
-    <button>⟵Volver al Inicio</button>
+   <button (click)="volverInicio()">⟵ Volver al Inicio</button>
   </div>
 
 </div>

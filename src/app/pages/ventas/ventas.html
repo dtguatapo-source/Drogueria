@@ -21,8 +21,8 @@
 
     <!-- ADMINISTRADOR -->
     <div class="menu-administrador">
-      <span class="admin">Admin</span>
-      <span class="salir">⟵ Salir</span>
+      <span class="admin"(click)="irAdministrador()">Admin</span>
+      <span class="salir"(click)="salir()">⟵ Salir</span>
     </div>
 
   </nav>
@@ -71,17 +71,29 @@
 
     <div class="campo">
       <label>Fecha de Venta</label>
-      <input type="date">
+      
+      <input type="date" formControlName="fechaVenta">
+      <small *ngIf="FormularioVentas.get('fechaVenta')?.invalid && FormularioVentas.get('fechaVenta')?.touched">
+        
+      </small>
     </div>
 
     <div class="campo">
       <label>Cliente</label>
-      <input type="text" placeholder="Nombre del cliente">
+      <input type="text" formControlName="Cliente" placeholder="Nombre del cliente">
+      <small *ngIf="FormularioVentas.get('Cliente')?.invalid && FormularioVentas.get('Cliente')?.touched">
+       
+      </small>
+
     </div>
 
     <div class="campo">
       <label>N° Factura</label>
-      <input type="text" value="VTA-0001">
+      <input type="text" formControlName="Factura" value="VTA-0001">
+      <small *ngIf="FormularioVentas.get('Factura')?.invalid && FormularioVentas.get('Factura')?.touched">
+       
+      </small>
+
     </div>
 
   </div>
@@ -90,22 +102,35 @@
 
     <div class="campo">
       <label>Código Medicamento</label>
-      <input type="text">
+      <input type="text" formControlName="Codigo">
+        <small *ngIf="FormularioVentas.get('Codigo')?.invalid && FormularioVentas.get('Codigo')?.touched">  
+          
+        </small>
+
     </div>
 
     <div class="campo">
       <label>Medicamento</label>
-      <input type="text">
+      <input type="text" formControlName="Medicamento" placeholder="Nombre del medicamento">
+      <small *ngIf="FormularioVentas.get('Medicamento')?.invalid && FormularioVentas.get('Medicamento')?.touched">
+
+      </small>    
     </div>
 
     <div class="campo">
       <label>Laboratorio</label>
-      <input type="text">
+      <input type="text" formControlName="Laboratorio" placeholder="Nombre del laboratorio">
+    <small *ngIf="FormularioVentas.get('Laboratorio')?.invalid && FormularioVentas.get('Laboratorio')?.touched">
+
+      </small>
     </div>
 
     <div class="campo">
       <label>Fecha Caducidad</label>
-      <input type="date">
+      <input type="date" formControlName="fechaCaducidad">
+      <small *ngIf="FormularioVentas.get('fechaCaducidad')?.invalid && FormularioVentas.get('fechaCaducidad')?.touched">
+        
+      </small>
     </div>
 
   </div>
@@ -128,20 +153,30 @@
 
     <div class="campo">
       <label>Cantidad</label>
-      <input type="number">
+      <input type="number" formControlName="Cantidad">
+      <small *ngIf="FormularioVentas.get('Cantidad')?.invalid && FormularioVentas.get('Cantidad')?.touched">
+        
+      </small>
     </div>
 
     <div class="campo">
       <label>Precio Venta</label>
-      <input type="number">
+      <input type="number" formControlName="Precio">
+      <small *ngIf="FormularioVentas.get('Precio')?.invalid && FormularioVentas.get('Precio')?.touched">
+        
+      </small>
     </div>
 
     <div class="campo total">
       <label>Total</label>
-      <input type="number">
+      <input type="number"formControlName="Total" >
+      <small *ngIf="FormularioVentas.get('Total')?.invalid && FormularioVentas.get('Total')?.touched">
+        
+      </small>
+
     </div>
 
-    <button class="boton-agregar">+</button>
+    <button class="boton-agregar"(click)="agregarProducto()">+</button>
 
   </div>
 
@@ -177,7 +212,7 @@
         <td>$3800</td>
         <td>$11400</td>
         <td>
-          <button class="boton-quitar"> Quitar</button>
+          <button class="boton-quitar"(click)="quitarProducto()"> Quitar</button>
         </td>
       </tr>
 
@@ -196,13 +231,13 @@
 
 <div class="botones">
 
-  <button class="boton confirmar">Confirmar Venta</button>
+  <button class="boton confirmar"(click)="confirmarVenta()">Confirmar Venta</button>
 
-  <button class="boton imprimir">Imprimir</button>
+  <button class="boton imprimir"(click)="imprimirVenta()">Imprimir</button>
 
-  <button class="boton limpiar">Limpiar</button>
+  <button class="boton limpiar"(click)="limpiarFormulario()">Limpiar</button>
 
-  <button class="boton salir">⟵ Salir</button>
+  <button class="boton salir"(click)="salir()">⟵ Salir</button>
 
 </div>
 
