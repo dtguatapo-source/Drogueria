@@ -1,1 +1,143 @@
-<p>compras works!</p>
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <span>SISTEMA DROGUERIA PILY</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li routerLink="/dashboard">Inicio</li>
+            <li routerLink="/inventario">Inventario</li>
+            <li routerLink="/compras" class="active">Compras</li>
+            <li routerLink="/ventas">Ventas</li>
+            <li routerLink="/informes">Informes</li>
+        </ul>
+    </nav>
+
+    <div class="user-section">
+        <span class="admin">Admin</span>
+        <button class="logout" (click)="salir()">Salir</button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="container">
+
+<form [formGroup]="FormularioCompras">
+
+    <h1>Registro de Compras</h1>
+
+    <!-- BUSCAR -->
+    <div class="search-box">
+        <input type="text" placeholder="Buscar compra...">
+    </div>
+
+    <!-- INFORMACIÓN DE COMPRA -->
+    <section class="card-form">
+        <h3>Información de Compra</h3>
+
+        <div class="form-grid">
+
+            <div>
+                <label>Fecha de compra</label>
+                <input type="date" formControlName="Fecha">
+            </div>
+
+            <div>
+                <label>Proveedor</label>
+                <input type="text" placeholder="Nombre del proveedor" formControlName="Proveedor">
+            </div>
+
+            <div>
+                <label>N° Factura</label>
+                <input type="text" placeholder="FAC-0001" formControlName="Factura">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEDICAMENTO -->
+    <section class="card-form">
+
+        <h3>Medicamento</h3>
+
+        <div class="form-grid">
+
+            <div>
+                <label>Código</label>
+                <input type="text" placeholder="MED-XXX" formControlName="Codigo">
+            </div>
+
+            <div>
+                <label>Medicamento</label>
+                <input type="text" placeholder="Nombre del medicamento" formControlName="Medicamento">
+            </div>
+
+            <div>
+                <label>Laboratorio</label>
+                <input type="text" formControlName="Laboratorio">
+            </div>
+
+            <div>
+                <label>Fecha caducidad</label>
+                <input type="date" formControlName="FechaCaducidad">
+            </div>
+
+            <div>
+                <label>Cantidad</label>
+                <input type="number" formControlName="Cantidad">
+            </div>
+
+            <div>
+                <label>Precio compra</label>
+                <input type="text" placeholder="$" formControlName="PrecioCompra">
+            </div>
+
+            <div>
+                <label>Precio venta</label>
+                <input type="text" placeholder="$" formControlName="PrecioVenta">
+            </div>
+
+        </div>
+
+        <button class="add-btn">+</button>
+
+    </section>
+
+    <!-- TABLA -->
+    <section class="card-table">
+
+        <h3>Detalle de Compra</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Laboratorio</th>
+                    <th>Cantidad</th>
+                    <th>Precio Compra</th>
+                    <th>Precio Venta</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td colspan="6">No hay productos agregados aún</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- BOTONES -->
+    <div class="bottom-buttons">
+        <button class="btn guardar" (click)="guardarCompra()">Guardar</button>
+        <button class="btn salir" routerLink="/dashboard">
+            ← Volver
+        </button>
+    </div>
+
+</form>
+
+</main>

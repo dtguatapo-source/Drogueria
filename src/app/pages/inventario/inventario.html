@@ -1,1 +1,152 @@
-<p>inventario works!</p>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <span>SISTEMA DROGUERIA PILY</span>
+    </div>
+
+    <nav>
+        <ul>
+            <li routerLink="/dashboard">Inicio</li>
+            <li routerLink="/inventario" class="active">Inventario</li>
+            <li routerLink="/compras">Compras</li>
+            <li routerLink="/ventas">Ventas</li>
+            <li routerLink="/informes">Informes</li>
+        </ul>
+    </nav>
+
+    <div class="user-section">
+        <span class="admin">Admin</span>
+        <button class="logout" (click)="salir()">Salir</button>
+    </div>
+</header>
+
+<!-- CONTENIDO -->
+<main class="container">
+
+<form [formGroup]="FormularioInventario">
+
+    <h1>Agregar Producto</h1>
+
+    <!-- BUSCAR -->
+    <div class="search-box">
+        <input type="text" placeholder="Buscar producto...">
+    </div>
+
+    <!-- FORMULARIO -->
+    <section class="card-form">
+
+        <h3>Datos del Producto</h3>
+
+        <div class="form-grid">
+
+            <div>
+                <label>ID Producto</label>
+                <input type="text" placeholder="Auto" formControlName="Id">
+            </div>
+
+            <div>
+                <label>Nombre del medicamento</label>
+                <input type="text" placeholder="Ingrese el nombre..." formControlName="Nombre">
+            </div>
+
+            <div>
+                <label>Laboratorio</label>
+                <input type="text" placeholder="Nombre del laboratorio" formControlName="Laboratorio">
+            </div>
+
+            <div>
+                <label>Descripción</label>
+                <input type="text" placeholder="Descripción del producto" formControlName="Descripcion">
+            </div>
+
+            <div>
+                <label>Cantidad</label>
+                <input type="number" placeholder="0" formControlName="Cantidad">
+            </div>
+
+            <div>
+                <label>Precio de compra</label>
+                <input type="text" placeholder="$ 0.00" formControlName="PrecioCompra">
+            </div>
+
+            <div>
+                <label>Precio de venta</label>
+                <input type="text" placeholder="$ 0.00" formControlName="PrecioVenta">
+            </div>
+
+        </div>
+
+        <button class="add-btn">+</button>
+
+    </section>
+
+    <!-- TABLA -->
+    <section class="card-table">
+
+        <h3>Listado de Productos</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Laboratorio</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Precio Compra</th>
+                    <th>Precio Venta</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>MED-001</td>
+                    <td>Ibuprofeno 400mg</td>
+                    <td>Genfar</td>
+                    <td>Analgésico</td>
+                    <td>120</td>
+                    <td>$2.500</td>
+                    <td>$3.800</td>
+                    <td>Activo</td>
+                </tr>
+
+                <tr>
+                    <td>MED-002</td>
+                    <td>Acetaminofén 500mg</td>
+                    <td>Bayer</td>
+                    <td>Antipirético</td>
+                    <td>15</td>
+                    <td>$1.200</td>
+                    <td>$1.900</td>
+                    <td>Bajo stock</td>
+                </tr>
+
+                <tr>
+                    <td>MED-003</td>
+                    <td>Amoxicilina 500mg</td>
+                    <td>MK</td>
+                    <td>Antibiótico</td>
+                    <td>0</td>
+                    <td>$4.800</td>
+                    <td>$7.200</td>
+                    <td>Sin stock</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- BOTONES -->
+    <div class="bottom-buttons">
+        <button class="btn modificar">Modificar</button>
+        <button class="btn eliminar">Eliminar</button>
+        <button class="btn guardar" (click)="registrarProducto()">Registrar</button>
+        <button class="btn limpiar" (click)="limpiar()">Limpiar datos</button>
+        <button class="btn salir" routerLink="/dashboard">← Salir</button>
+    </div>
+
+</form>
+
+</main>
