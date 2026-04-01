@@ -1,0 +1,7 @@
+[
+  { "id": 1, "producto": "acetaminofen", "total": 1500 },
+  { "id": 2, "producto": "ibuprofeno", "total": 2000 },
+  { "id": 3, "producto": "amoxicilina", "total": 3000 },
+  { "id": 4, "producto": "loratadina", "total": 2500 },
+  { "id": 5, "producto": "omeprazol", "total": 1800 }
+]
